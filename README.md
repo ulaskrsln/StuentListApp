@@ -13,9 +13,9 @@ Bu proje, ASP.NET Core MVC ve Entity Framework Core kullanarak basit bir öğren
 
 ## Kullanılan Teknolojiler
 
-*   **.NET 6** (veya projenin geliştirildiği SDK sürümü)
+*   **.NET 6** 
 *   **ASP.NET Core MVC**
-*   **Entity Framework Core 6** (veya kullanılan sürüm)
+*   **Entity Framework Core 6**
 *   **SQL Server LocalDB** (Veritabanı olarak)
 *   **C#**
 *   **HTML / CSS (Bootstrap)** (Varsayılan şablon üzerinden)
