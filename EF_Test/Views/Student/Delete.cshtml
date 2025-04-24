@@ -1,0 +1,47 @@
+﻿@model EF_Test.Models.StudentModel
+
+@{
+    ViewData["Title"] = "Öğrenci Sil";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3 class="text-danger">Bu öğrenci kaydını silmek istediğinizden emin misiniz?</h3>
+<div>
+    <h4>Öğrenci Bilgileri</h4>
+    <hr />
+    <dl class="row">
+        @* Açıklama listesi (dl) ile bilgileri gösterelim *@
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.SchoolNumber)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.SchoolNumber)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Department)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Department)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Grade)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Grade)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Index">Listeye Dön</a>
+    </form>
+</div>
